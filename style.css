@@ -1,0 +1,22 @@
+body {
+  /* Set line height to 1.5 times the font size
+	   and use Poppins font for a modern look
+	 */
+  font: 100%/1.5 'Poppins', system-ui;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Modern border class for profile photo */
+.modern-border {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
