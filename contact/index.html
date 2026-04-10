@@ -9,22 +9,30 @@
 </head>
 <body>
     <nav>
-        <a href="../index.html">Home</a> | 
-        <a href="../projects/index.html">Projects</a> | 
-        <a href="index.html">Contact</a> | 
-        <a href="../cv/index.html">CV</a> | 
-        <a href="https://github.com/F3rando" target="_blank">GitHub</a>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects/index.html">Projects</a></li>
+            <li><a href="index.html" class="current">Contact</a></li>
+            <li><a href="../cv/index.html">CV</a></li>
+            <li><a href="https://github.com/F3rando" target="_blank">GitHub</a></li>
+        </ul>
     </nav>
 
     <h1>Contact</h1>
     <p>Feel free to reach out to me!</p>
-    <form action="mailto:luisfc0406@gmail.com" method= "post" enctype="text/plain">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br><br>
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+    <form action="mailto:luisfc0406@gmail.com" method="post" enctype="text/plain">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+        </div>
         <input type="submit" value="Send">
     </form>
 </body>

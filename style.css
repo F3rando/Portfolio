@@ -1,11 +1,17 @@
+/* Custom Properties and OKLCH Colors */
+:root {
+  --color-accent: oklch(79.216% 0.05882 235.094);
+}
+
 body {
   /* Set line height to 1.5 times the font size
 	   and use Poppins font for a modern look
 	 */
   font: 100%/1.5 'Poppins', system-ui;
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 20px;
+  margin-block: 0;
+  margin-inline: max(1em, (100% - 100ch) / 2);
+  max-width: 100ch;
+  padding: 1em;
 }
 
 /* Make images responsive */
@@ -14,9 +20,99 @@ img {
   height: auto;
 }
 
+/* Navigation Flexbox Architecture */
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: contents;
+}
+
+nav a {
+  flex: 1;
+  text-align: center;
+  padding: 0.5em;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a:hover {
+  color: var(--color-accent);
+}
+
+.current {
+  border-bottom: 3px solid var(--color-accent);
+  padding-bottom: calc(0.5em - 3px);
+}
+
 /* Modern border class for profile photo */
 .modern-border {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ddd;
+  border: 1px solid oklch(85% 0% 0%);
+}
+
+/* Contact Form Grid Layout */
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
+
+form .form-group {
+  display: grid;
+  grid-template-columns: subgrid;
+  align-items: center;
+}
+
+form label {
+  text-align: right;
+  padding-right: 0.5em;
+}
+
+form input[type="submit"] {
+  grid-column: 2;
+}
+
+/* Projects Grid with Subgrid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.projects-grid article {
+  display: grid;
+  grid-template-rows: subgrid;
+  row-gap: 0;
+  grid-row: span 4;
+}
+
+.projects-grid article h3 {
+  margin: 0 0 0.5em 0;
+}
+
+.projects-grid article img {
+  border-radius: 8px;
+  margin-bottom: 0.5em;
+}
+
+.projects-grid article p {
+  margin: 0.5em 0;
+  font-size: 0.95em;
+}
+
+.projects-grid article a {
+  color: var(--color-accent);
+  text-decoration: none;
+  margin-top: 0.5em;
+}
+
+.projects-grid article a:hover {
+  text-decoration: underline;
 }
