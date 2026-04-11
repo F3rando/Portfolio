@@ -116,3 +116,64 @@ form input[type="submit"] {
 .projects-grid article a:hover {
   text-decoration: underline;
 }
+
+/* CV/Resume Styling */
+.contact-info {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 2em;
+  color: var(--color-accent);
+}
+
+#education, #experience, #projects, #skills {
+  margin-bottom: 2em;
+}
+
+#education h2, #experience h2, #projects h2, #skills h2 {
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+
+.education-item, .experience-item, .project-item {
+  margin-bottom: 1.5em;
+}
+
+.education-item h3, .experience-item h3, .project-item h3 {
+  margin-bottom: 0.25em;
+  color: var(--color-accent);
+}
+
+.degree {
+  font-weight: 600;
+  margin: 0.25em 0;
+}
+
+.location {
+  font-style: italic;
+  color: #666;
+  margin: 0.25em 0;
+}
+
+.coursework {
+  margin-top: 0.5em;
+}
+
+.tech {
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: 0.25em 0;
+}
+
+.skill-category {
+  margin-bottom: 1em;
+}
+
+.skill-category h3 {
+  margin-bottom: 0.25em;
+  color: var(--color-accent);
+}
+
+.skill-category p {
+  margin: 0;
+}

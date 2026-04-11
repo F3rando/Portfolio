@@ -18,86 +18,111 @@
         </ul>
     </nav>
 
-    <h1>Luis Corona - Resume</h1>
+    <h1>Luis Corona</h1>
+    <p class="contact-info">951-508-7490 | Luisfc0406@gmail.com | LinkedIn | github.com/F3rando | U.S. Citizen</p>
 
     <section id="education">
         <h2>Education</h2>
-        <article>
-            <h3>UC San Diego</h3>
-            <p>B.S. in Data Science (GPA: 3.7), Expected <time datetime="2027-06">June 2027</time></p>
-            <p>Coursework: Data Structures, Algorithms, Statistical Analysis, Data Science in Practice, Econometrics, Linear Algebra, Multivariable Calculus.</p>
-        </article>
+        <div class="education-item">
+            <h3>University of California San Diego</h3>
+            <p class="degree">Bachelor of Science in Data Science (GPA: 3.7)</p>
+            <p class="location">La Jolla, CA | Expected Jun. 2027</p>
+            <p class="coursework"><strong>Relevant Coursework:</strong> Data Structures, Algorithms, Statistical Analysis, Data Science in Practice, Econometrics, Linear Algebra, Multivariable Calculus</p>
+        </div>
     </section>
 
     <section id="experience">
         <h2>Experience</h2>
-        <article>
-            <h3>Corona Custom Iron Works</h3>
-            <p>Web Developer / Apprentice (<time datetime="2022-06">Jun. 2022</time> – Present)</p>
+        
+        <div class="experience-item">
+            <h3>Web Developer / Apprentice — Corona Custom Iron Works</h3>
+            <p class="location">Corona, CA | Jun. 2022 – Present</p>
             <ul>
-                <li>Built Next.js/Vercel architecture for the company site</li>
-                <li>Developed reusable React components for product and service pages</li>
-                <li>Implemented CI/CD pipelines for faster deployments</li>
-                <li>Delivered a $30K+ sales impact through improved web presence</li>
+                <li>Architected a production Next.js website on Vercel, replacing static HTML to improve system scalability.</li>
+                <li>Built reusable React components and optimized assets to boost mobile usability and load performance.</li>
+                <li>Configured GitHub-based CI/CD pipelines to automate builds, previews, and production deployments.</li>
+                <li>Monitored traffic via Vercel Analytics; website has contributed to over $30K in new sales since launch.</li>
             </ul>
-        </article>
-        <article>
-            <h3>Triton Consulting Group</h3>
-            <p>Software Engineering Consultant for Out of the Blue AI (<time datetime="2026-01">Jan. 2026</time> – <time datetime="2026-03">Mar. 2026</time>)</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>Software Engineering Consultant — Triton Consulting Group</h3>
+            <p class="location">La Jolla, CA | Client: Out of the Blue AI | Jan. 2026 – Mar. 2026</p>
             <ul>
-                <li>Created a Node.js BFF API for secure backend communication</li>
-                <li>Used Zod validation contracts for strong request and response checks</li>
-                <li>Built the "Cardinality Rule" algorithm for real-time data processing</li>
+                <li>Architected a custom Backend-for-Frontend (BFF) API using Node.js as a secure translation layer between a React dashboard and external databases.</li>
+                <li>Developed modular POST endpoints (/kpi, /ts, /brk) protected by strict Zod validation contracts, ensuring 100% type safety and eliminating frontend crashes from invalid data.</li>
+                <li>Engineered a dynamic "Cardinality Rule" algorithm to process high-volume datasets in real-time, automatically aggregating excess rows to optimize UI chart rendering performance.</li>
             </ul>
-        </article>
-        <article>
-            <h3>Eclipse Analytics</h3>
-            <p>Data Analytics Contributor (<time datetime="2025-12">Dec. 2025</time>)</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>Data Analytics Contributor — Eclipse Analytics</h3>
+            <p class="location">La Jolla, CA | Student Organization Publication | Dec. 2025</p>
             <ul>
-                <li>Published an NBA CBA article with detailed player and salary analysis</li>
-                <li>Defined the 'Production Score' metric to evaluate performance across players</li>
-                <li>Created Seaborn visualizations to communicate analytic insights</li>
+                <li>Authored a data-driven article on the NBA Collective Bargaining Agreement, modeling player capital efficiency.</li>
+                <li>Engineered a "Production Score" metric using pandas to quantify ROI, prioritizing availability over raw volume.</li>
+                <li>Visualized salary-to-performance correlations using Seaborn, identifying "Supermax" contract outliers.</li>
             </ul>
-        </article>
+        </div>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
-        <article>
+        
+        <div class="project-item">
+            <h3>Checkmate (DiamondHacks 2026)</h3>
+            <p class="tech">FastAPI, Browser-use, Gemini, Python | Apr. 2026</p>
+            <ul>
+                <li>Engineered an agentic automation system using Browser-use to "heal" messy OCR receipt data by autonomously navigating restaurant websites to verify menu items, descriptions, and pricing.</li>
+                <li>Architected a FastAPI backend integrated with Gemini 2.5 Flash (Vision) to parse line items and engineer a proportional bill-splitting algorithm accounting for dynamic tax and tip distribution.</li>
+                <li>Deployed a mobile-first dashboard with real-time status feeds and Venmo Deep Link integration, automating the end-to-end expense settlement process for groups.</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
             <h3>US Power Outage Predictive Analysis</h3>
-            <p>(<time datetime="2026-03">Mar. 2026</time>)</p>
+            <p class="tech">scikit-learn, Python, Pandas | Mar. 2026</p>
             <ul>
-                <li>Built a scikit-learn ML pipeline for outage prediction</li>
-                <li>Completed fairness analysis using permutation testing</li>
-                <li>Optimized a Random Forest model to improve RMSE by 27%</li>
+                <li>Built an end-to-end machine learning pipeline using scikit-learn to predict major U.S. power outage durations, processing historical geographic and climatic data.</li>
+                <li>Conducted rigorous missingness dependency tests and fairness analysis via permutation testing to ensure unbiased predictions across urban and rural populations.</li>
+                <li>Engineered seasonal features and optimized a Random Forest Regressor using GridSearchCV, improving baseline RMSE by 27% while preventing data leakage.</li>
             </ul>
-        </article>
-        <article>
+        </div>
+
+        <div class="project-item">
             <h3>NBA Fantasy Analytics Platform</h3>
-            <p>(<time datetime="2026-01">Jan. 2026</time>)</p>
+            <p class="tech">Python, SQL, AWS, Pandas | Jan. 2026</p>
             <ul>
-                <li>Designed a full-stack system with AWS and normalized relational schema</li>
-                <li>Built waiver-wire rankings and player projections</li>
-                <li>Developed a scoring algorithm using rolling windows and volatility penalties</li>
+                <li>Architected a full-stack analytics system with a database-backed pipeline ingesting NBA game data to generate waiver-wire rankings.</li>
+                <li>Designed a normalized relational schema with idempotent incremental updates, enabling fast querying of player and injury stats.</li>
+                <li>Engineered a scoring algorithm using rolling 7/14-day windows, minutes-trend analysis, and volatility penalties to identify sleeper candidates.</li>
             </ul>
-        </article>
-        <article>
-            <h3>TCG Web Platform</h3>
-            <p>(<time datetime="2025-11">Nov. 2025</time>)</p>
-            <ul>
-                <li>Created a Next.js platform automating applications for 300+ users</li>
-                <li>Integrated form API handling for application submissions</li>
-            </ul>
-        </article>
+        </div>
     </section>
 
     <section id="skills">
         <h2>Technical Skills</h2>
-        <h3>Languages</h3>
-        <ul>
-            <li>Python</li>
-            <li>JavaScript</li>
-            <li>SQL</li>
+        
+        <div class="skill-category">
+            <h3>Languages</h3>
+            <p>Python, Java, JavaScript, HTML/CSS, SQL</p>
+        </div>
+        
+        <div class="skill-category">
+            <h3>Frameworks & Tools</h3>
+            <p>Next.js, React, FastAPI, Browser-use, Supabase, Node.js, AWS, Git/GitHub, CI/CD, Vercel</p>
+        </div>
+        
+        <div class="skill-category">
+            <h3>Data Science</h3>
+            <p>pandas, scikit-learn, NumPy, Matplotlib, Seaborn, Machine Learning, Exploratory Data Analysis (EDA)</p>
+        </div>
+        
+        <div class="skill-category">
+            <h3>Concepts & Other</h3>
+            <p>ETL Pipelines, Relational Database Design, API Integration, Auth Systems, UI/UX, SEO, Bilingual</p>
+        </div>
+    </section>
         </ul>
         <h3>Frameworks</h3>
         <ul>
