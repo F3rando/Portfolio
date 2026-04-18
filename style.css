@@ -27,6 +27,8 @@ img {
 /* Navigation Flexbox Architecture */
 nav {
   --border-color: oklch(50% 10% 200 / 40%);
+  /* Fallback border color */
+  --border-color-fallback: rgba(59, 130, 246, 0.4);
 }
 
 nav ul {
@@ -49,11 +51,17 @@ nav a {
 }
 
 nav a:hover {
+  /* Modern approach: mix accent color with canvas (browser default background) */
   background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+  /* Fallback for browsers without color-mix: semi-transparent accent color */
+  background-color: oklch(79.216% 0.05882 235.094 / 0.15);
+  /* Ultimate fallback: RGBA blue */
+  background-color: rgba(59, 130, 246, 0.15);
 }
 
 .current {
-  border-bottom: 3px solid var(--border-color);
+  /* Use the accent color as specified in lab */
+  border-bottom: 3px solid var(--color-accent);
   padding-bottom: calc(0.5em - 3px);
 }
 
