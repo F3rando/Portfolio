@@ -3,6 +3,10 @@
   --color-accent: oklch(79.216% 0.05882 235.094);
 }
 
+html {
+  color-scheme: light dark;
+}
+
 body {
   /* Set line height to 1.5 times the font size
 	   and use Poppins font for a modern look
@@ -21,6 +25,10 @@ img {
 }
 
 /* Navigation Flexbox Architecture */
+nav {
+  --border-color: oklch(50% 10% 200 / 40%);
+}
+
 nav ul {
   display: flex;
   list-style: none;
@@ -41,12 +49,21 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--color-accent);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 .current {
-  border-bottom: 3px solid var(--color-accent);
+  border-bottom: 3px solid var(--border-color);
   padding-bottom: calc(0.5em - 3px);
+}
+
+/* Theme Switcher */
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  font-family: inherit;
 }
 
 /* Modern border class for profile photo */
