@@ -113,3 +113,54 @@ form?.addEventListener('submit', (event) => {
   // Open user's mail client with the formatted data
   location.href = url;
 });
+
+export async function fetchJSON(url) {
+  try {
+    const response = await fetch(url);
+
+    // Check if the file actually exists/loaded
+    if (!response.ok) {
+      throw new Error(`Failed to fetch: ${response.statusText}`);
+    }
+
+    // Convert the raw response into a JS object
+    const data = await response.json();
+    return data;
+
+  } catch (error) {
+    console.error('Error fetching JSON:', error);
+  }
+}
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  // Step 1: Clear the container so we don't have duplicates
+  containerElement.innerHTML = '';
+
+  // Step 2: Loop through each project in the array
+  for (let project of projects) {
+    const article = document.createElement('article');
+
+    const rawImage = project.image ?? '';
+    const imageSrc =
+      /^https?:\/\//.test(rawImage) || rawImage.startsWith('data:') || rawImage.startsWith('/')
+        ? rawImage
+        : `${BASE_PATH}/${rawImage.replace(/^\.\//, '')}`;
+    
+    // Step 3: Set the inner HTML using a template literal
+    article.innerHTML = `
+      <${headingLevel}>${project.title}</${headingLevel}>
+      <img src="${imageSrc}" alt="${project.title}" class= "modern-border">
+      <p>${project.description}</p>
+    `;
+
+    // Step 4: Add the article to the page
+    containerElement.appendChild(article);
+  }
+}
+
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
+
+// Lab spec uses this casing; keep both exports.
+export const fetchGithubData = fetchGitHubData;
