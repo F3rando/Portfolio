@@ -112,7 +112,71 @@ form input[type="submit"] {
   margin-top: 2em;
   width: 100%;
 }
+/* Pie chart + legend (Lab 5): side-by-side layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-block: 2em;
+}
 
+#projects-pie-plot {
+  max-width: 20em;
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+/* Step 5: Interactive pie (hover + selection) */
+#projects-pie-plot path {
+  cursor: pointer;
+  transition: 300ms;
+}
+
+#projects-pie-plot:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+}
+
+.selected:is(path) {
+  fill: var(--color);
+}
+
+.legend-item.selected {
+  font-weight: 600;
+}
+
+.legend {
+  flex: 1;
+  min-width: min(12em, 100%);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 0.75rem 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid oklch(85% 0% 0% / 55%);
+  border-radius: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend .swatch {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color, transparent);
+  border-radius: 3px;
+  flex-shrink: 0;
+}
 /* 2. The Articles: These are the 'items' on the shelf */
 .projects article {
   display: flex; 
@@ -133,6 +197,13 @@ form input[type="submit"] {
   margin: 0;
   font-size: 0.95em;
   color: inherit;
+}
+
+.projects .project-year {
+  color: #666;
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-variant-numeric: oldstyle-nums;
+  font-size: 0.9em;
 }
 
 .projects article img {

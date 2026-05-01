@@ -150,7 +150,10 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     article.innerHTML = `
       <${headingLevel}>${project.title}</${headingLevel}>
       <img src="${imageSrc}" alt="${project.title}" class= "modern-border">
-      <p>${project.description}</p>
+      <div class="project-meta">
+        <p class="project-description">${project.description}</p>
+        <p class="project-year">${project.year ?? ''}</p>
+      </div>
     `;
 
     // Step 4: Add the article to the page
