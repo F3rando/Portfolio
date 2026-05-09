@@ -14,6 +14,7 @@ const BASE_PATH = location.hostname === "localhost"
 const pages = [
   { url: `${BASE_PATH}/index.html`, title: "Home" },
   { url: `${BASE_PATH}/projects/index.html`, title: "Projects" },
+  { url: `${BASE_PATH}/meta/index.html`, title: "Meta" },
   { url: `${BASE_PATH}/contact/index.html`, title: "Contact" },
   { url: `${BASE_PATH}/cv/index.html`, title: "CV" },
   { url: "https://github.com/F3rando", title: "GitHub" }
