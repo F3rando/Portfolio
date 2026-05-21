@@ -3,72 +3,84 @@
         "title": "NBA Fantasy Dashboard",
         "year": 2026,
         "image": "./images/professional_pic.jpg",
-        "description": "A sports analytics platform designed to track player ROI and performance metrics."
+        "description": "A sports analytics platform designed to track player ROI and performance metrics.",
+        "url": ""
     },
     {
         "title": "Corona Custom Iron Works",
         "year": 2022,
         "image": "./images/Ciw-dashboard.png",
-        "description": "A professional business website built for my family's metal fabrication business."
+        "description": "A professional business website built for my family's metal fabrication business.",
+        "url": "https://www.coronacustomironworks.com/"
     },
     {
         "title": "Checkmate (DiamondHacks 2026)",
         "year": 2026,
-        "image": "./images/professional_pic.jpg",
-        "description": "Engineered an agentic automation system using Browser-use to \"heal\" messy OCR receipt data by autonomously navigating restaurant websites to verify menu items, descriptions, and pricing. Architected a FastAPI backend integrated with Gemini 2.5 Flash (Vision) to parse line items and engineer a proportional bill-splitting algorithm accounting for dynamic tax and tip distribution."
+        "image": "./images/Checkmate.png",
+        "description": "Engineered an agentic automation system using Browser-use to \"heal\" messy OCR receipt data by autonomously navigating restaurant websites to verify menu items, descriptions, and pricing. Architected a FastAPI backend integrated with Gemini 2.5 Flash (Vision) to parse line items and engineer a proportional bill-splitting algorithm accounting for dynamic tax and tip distribution.",
+        "url": ""
     },
     {
-        "title": "Machine Learning Pipeline",
+        "title": "SolarSense (DataHacks 2026)",
         "year": 2026,
-        "image": "./images/professional_pic.jpg",
-        "description": "Automated data processing and model training infrastructure built with Python."
+        "image": "./images/solarsense.png",
+        "description": "UI/UX track-winning geospatial dashboard using MapLibre GL, Gemini, AWS, and Leaflet to help San Diego local governments explore solar ROI and environmental impact insights.",
+        "url": "https://solar-roi-insights.vercel.app/dashboard"
     },
     {
-        "title": "Weather Forecast App",
-        "year": 2024,
-        "image": "./images/professional_pic.jpg",
-        "description": "Real-time weather forecast application with location-based predictions."
+        "title": "Bikewatching",
+        "year": 2026,
+        "image": "./images/Bikewatching.png",
+        "description": "Interactive Boston-area bike traffic visualization highlighting station activity and movement patterns through a map-based dashboard.",
+        "url": "https://f3rando.github.io/Lab-7-map/"
     },
     {
         "title": "E-Commerce Platform",
         "year": 2024,
         "image": "./images/professional_pic.jpg",
-        "description": "Full-stack online store with payment integration and inventory management."
+        "description": "Full-stack online store with payment integration and inventory management.",
+        "url": ""
     },
     {
         "title": "Social Network Clone",
         "year": 2025,
         "image": "./images/professional_pic.jpg",
-        "description": "Twitter-like social media platform with real-time notifications."
+        "description": "Twitter-like social media platform with real-time notifications.",
+        "url": ""
     },
     {
         "title": "Task Management System",
         "year": 2025,
         "image": "./images/professional_pic.jpg",
-        "description": "Collaborative task management tool with team sharing and deadlines."
+        "description": "Collaborative task management tool with team sharing and deadlines.",
+        "url": ""
     },
     {
         "title": "Blog CMS Platform",
         "year": 2023,
         "image": "./images/professional_pic.jpg",
-        "description": "Content management system for creating and publishing blog posts."
+        "description": "Content management system for creating and publishing blog posts.",
+        "url": ""
     },
     {
         "title": "Fitness Tracking App",
         "year": 2023,
         "image": "./images/professional_pic.jpg",
-        "description": "Mobile app for tracking workouts, calories, and fitness goals."
+        "description": "Mobile app for tracking workouts, calories, and fitness goals.",
+        "url": ""
     },
     {
         "title": "Chat Application",
         "year": 2024,
         "image": "./images/professional_pic.jpg",
-        "description": "Real-time messaging application with user authentication and rooms."
+        "description": "Real-time messaging application with user authentication and rooms.",
+        "url": ""
     },
     {
         "title": "Portfolio Generator",
         "year": 2025,
         "image": "./images/professional_pic.jpg",
-        "description": "Tool to automatically generate professional portfolio websites."
+        "description": "Tool to automatically generate professional portfolio websites.",
+        "url": ""
     }
 ]

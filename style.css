@@ -206,6 +206,13 @@ form input[type="submit"] {
   font-size: 0.9em;
 }
 
+.projects .project-link {
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
 .projects article img {
   width: 100%;           /* Scale to the article width */
   max-width: 100%;

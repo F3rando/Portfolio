@@ -5,18 +5,19 @@ function $$(selector, context = document) {
 }
 
 // Step 3: Dynamic Navigation Menu Generation
-// Detect BASE_PATH based on hostname (localhost vs GitHub Pages)
-const BASE_PATH = location.hostname === "localhost" 
-  ? "" 
+// Detect BASE_PATH based on hostname (local dev vs GitHub Pages)
+const LOCAL_HOSTS = new Set(["localhost", "127.0.0.1", "::1"]);
+const BASE_PATH = LOCAL_HOSTS.has(location.hostname)
+  ? ""
   : "/Portfolio";
 
 // Array of page objects with url and title
 const pages = [
-  { url: `${BASE_PATH}/index.html`, title: "Home" },
-  { url: `${BASE_PATH}/projects/index.html`, title: "Projects" },
-  { url: `${BASE_PATH}/meta/index.html`, title: "Meta" },
-  { url: `${BASE_PATH}/contact/index.html`, title: "Contact" },
-  { url: `${BASE_PATH}/cv/index.html`, title: "CV" },
+  { url: `${BASE_PATH}/`, title: "Home" },
+  { url: `${BASE_PATH}/projects/`, title: "Projects" },
+  { url: `${BASE_PATH}/meta/`, title: "Meta" },
+  { url: `${BASE_PATH}/contact/`, title: "Contact" },
+  { url: `${BASE_PATH}/cv/`, title: "CV" },
   { url: "https://github.com/F3rando", title: "GitHub" }
 ];
 
@@ -146,6 +147,16 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
       /^https?:\/\//.test(rawImage) || rawImage.startsWith('data:') || rawImage.startsWith('/')
         ? rawImage
         : `${BASE_PATH}/${rawImage.replace(/^\.\//, '')}`;
+    const rawUrl = project.url?.trim() ?? '';
+    const projectUrl =
+      rawUrl && (/^https?:\/\//.test(rawUrl) || rawUrl.startsWith('/'))
+        ? rawUrl
+        : rawUrl
+          ? `${BASE_PATH}/${rawUrl.replace(/^\.\//, '')}`
+          : '';
+    const projectLink = projectUrl
+      ? `<a class="project-link" href="${projectUrl}" target="_blank" rel="noopener noreferrer">View project</a>`
+      : '';
     
     // Step 3: Set the inner HTML using a template literal
     article.innerHTML = `
@@ -154,6 +165,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
       <div class="project-meta">
         <p class="project-description">${project.description}</p>
         <p class="project-year">${project.year ?? ''}</p>
+        ${projectLink}
       </div>
     `;
 
